@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+}
+
+.header .header-left {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-right {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header .header-right ul {
+    margin-right: 10%;
+}
+
+.header .header-right ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.header .header-right ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.header .header-right ul li a:hover{
+    border-bottom: 2px solid gray;
+    color: gray;
+    transition: 0.1s ease-in;
+}
+
+.hero-div {
+    width: 100%;
+    height: 90vh;
+    background-image: url("../img/hero-img.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+    background-position: center center;
+    image-resolution: from-image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-div .naslov {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 60px;
+    flex-direction: column;
+}
+
+.hero-div .naslov h1 {
+    text-shadow: 4px 4px black;
+}
+
+.hero-div .naslov p {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 25px;
+}
+
+.hero-div .naslov .shop-btn {
+    width: 25%;
+    height: 7vh;
+    background-color: white;
+    border: 1px solid transparent;
+    color: black;
+    margin-top: 5%;
+    font-size: 20px;
+    font-family: 'Roboto';
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.hero-div .naslov .shop-btn:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    transition: 0.3s ease-in;
+}
+
+.shop-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.shop-div .shop-div-left {
+    width: 42%;
+    height: 95vh;
+    background-image: url('../img/nike-shop-1-blur.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+
+.shop-div .shop-div-left p {
+    margin-bottom: 3%;
+    margin-left: 5%;
+    text-shadow: 2px 2px black;
+}
+
+.shop-div .shop-div-left a {
+    margin-bottom: 2%;
+    margin-right: 5%;
+    width: 15%;
+    height: 5vh;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+    
+.shop-div .shop-div-left a:hover {
+    background-color: white;
+    transition: 0.3s ease-in;
+}
+
+.shop-div .shop-div-right {
+    width: 53%;
+    margin-left: 1%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-div .shop-div-right .shop-div-right-1 {
+    width: 100%;
+    height: 49vh;
+    background-image: url('../img/nike-shop-2.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+
+.shop-div .shop-div-right .shop-div-right-1 p {
+    margin-bottom: 3%;
+    margin-left: 5%;
+    text-shadow: 2px 2px black;
+}
+
+.shop-div .shop-div-right .shop-div-right-1 a {
+    margin-bottom: 2%;
+    margin-right: 5%;
+    width: 12%;
+    height: 5vh;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.shop-div .shop-div-right .shop-div-right-1 a:hover {
+    background-color: white;
+    transition: 0.3s ease-in;
+}
+
+.shop-div .shop-div-right .shop-div-right-2 {
+    margin-top: 2%;
+    width: 100%;
+    height: 49vh;
+    background-image: url('../img/nike-shop-5.jpg');
+    background-size: 100%;
+    background-position: cover cover;
+    background-position-y: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+
+.shop-div .shop-div-right .shop-div-right-2 p {
+    margin-bottom: 3%;
+    margin-left: 5%;
+    text-shadow: 2px 2px black;
+}
+
+.shop-div .shop-div-right .shop-div-right-2 a {
+    margin-bottom: 2%;
+    margin-right: 5%;
+    width: 12%;
+    height: 5vh;
+    border-radius: 40px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.shop-div .shop-div-right .shop-div-right-2 a:hover {
+    background-color: white;
+    transition: 0.3s ease-in;
+}
+
+.shopper-div {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.shopper-div .shopper-div-1 {
+    width: 20%;
+    height: 40vh;
+    background-image: url("../img/nike-01.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow: 0px 0px 4px rgb(172, 172, 172);
+}
+
+.shopper-div .shopper-div-1:hover {
+    box-shadow: 0px 0px 40px gray;
+    cursor: pointer;
+    height: 45vh;
+    transition: 0.3s ease-in;
+}
+
+.shopper-div .shopper-div-2 {
+    width: 20%;
+    height: 40vh;
+    background-image: url("../img/nike-02.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow: 0px 0px 4px rgb(172, 172, 172);
+}
+
+.shopper-div .shopper-div-2:hover {
+    box-shadow: 0px 0px 40px gray;
+    cursor: pointer;
+    height: 45vh;
+    transition: 0.3s ease-in;
+}
+
+.shopper-div .shopper-div-3 {
+    width: 20%;
+    height: 40vh;
+    background-image: url("../img/nike-03.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow: 0px 0px 4px rgb(172, 172, 172);
+}
+
+.shopper-div .shopper-div-3:hover {
+    box-shadow: 0px 0px 40px gray;
+    cursor: pointer;
+    height: 45vh;
+    transition: 0.3s ease-in;
+}
+
+.shopper-div .shopper-div-4 {
+    width: 20%;
+    height: 40vh;
+    background-image: url("../img/nike-04.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    box-shadow: 0px 0px 4px rgb(172, 172, 172);
+}
+
+.shopper-div .shopper-div-4:hover {
+    box-shadow: 0px 0px 40px gray;
+    cursor: pointer;
+    height: 45vh;
+    transition: 0.3s ease-in;
+}
+
+.ime-patike {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 18px;
+    font-family: 'Roboto';
+    margin-bottom: 5%;
+}
+
+.footer {
+    width: 100%;
+    height: 37vh;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .footer-1 {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.footer .footer-1 p {
+    margin-top: 1.5%;
+    font-family: 'Roboto';
+}
+
+.footer .footer-2 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.footer .footer-2 a {
+    font-size: 22px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-1 h1 {
+    font-family: 'Roboto';
+}
+
+
+.footer .footer-3 {
+    width: 100%;
+    height: 7vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-3 p {
+    color: white;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+a.fa-facebook:hover {
+    background-color: #3b5998;
+}
+
+a.fa-twitter:hover {
+    background-color: rgb(29 161 242);
+}
+
+a.fa-youtube:hover {
+    background-color: red;
+}
+
+a.fa-google:hover {
+    background-color: #DB4437;
+}
