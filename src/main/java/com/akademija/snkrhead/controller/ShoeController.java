@@ -73,4 +73,30 @@ public class ShoeController {
         userService.saveUser(user);
         return "redirect:/";
     }
+
+    @GetMapping("/addSupplier")
+    public String addSupplier(Model model) {
+        Supplier supplier = new Supplier();
+        model.addAttribute("emptySupplier", supplier);
+        return "addsupplier.html";
+    }
+
+    @PostMapping("/saveSupplier")
+    public String saveSupplier(@ModelAttribute("emptySupplier") Supplier supplier) {
+        supplierService.saveSupplier(supplier);
+        return "redirect:/";
+    }
+
+    @GetMapping("/addShoe")
+    public String addShoe(Model model) {
+        Shoe shoe = new Shoe();
+        model.addAttribute("emptyShoe", shoe);
+        return "addshoe.html";
+    }
+
+    @PostMapping("/saveShoe")
+    public String saveShoe(@ModelAttribute("emptyShoe") Shoe shoe) {
+        shoeService.saveShoe(shoe);
+        return "redirect:/";
+    }
 }

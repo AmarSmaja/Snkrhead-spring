@@ -1,21 +1,16 @@
 package com.akademija.snkrhead.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "supplier", schema = "snkrhead")
 public class Supplier {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long supplier_id;
     private String ime;
     private String adresa;
-
-    public Supplier() {
-
-    }
 
     public Long getSupplier_id() {
         return supplier_id;
