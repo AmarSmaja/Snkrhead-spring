@@ -1,22 +1,17 @@
 package com.akademija.snkrhead.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users", schema = "snkrhead")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long user_id;
     private String email;
     private String first_name;
     private String last_name;
-
-    public User() {
-
-    }
 
     public Long getUser_id() {
         return user_id;

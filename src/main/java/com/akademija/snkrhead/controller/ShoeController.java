@@ -1,17 +1,13 @@
 package com.akademija.snkrhead.controller;
 
-import com.akademija.snkrhead.entity.Buyer;
-import com.akademija.snkrhead.entity.Shoe;
-import com.akademija.snkrhead.entity.Supplier;
-import com.akademija.snkrhead.entity.User;
-import com.akademija.snkrhead.service.BuyerService;
-import com.akademija.snkrhead.service.ShoeService;
-import com.akademija.snkrhead.service.SupplierService;
-import com.akademija.snkrhead.service.UserService;
+import com.akademija.snkrhead.entity.*;
+import com.akademija.snkrhead.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -63,5 +59,18 @@ public class ShoeController {
         List<Buyer> buyerList = buyerService.getAllBuyers();
         model.addAttribute("listOfBuyers", buyerList);
         return "viewbuyers.html";
+    }
+
+    @GetMapping("/register")
+    public String showRegister(Model model) {
+        User user = new User();
+        model.addAttribute("emptyUser", user);
+        return "register.html";
+    }
+
+    @PostMapping("/saveUser")
+    public String saveUser(@ModelAttribute("emptyUser") User user) {
+        userService.saveUser(user);
+        return "redirect:/";
     }
 }
