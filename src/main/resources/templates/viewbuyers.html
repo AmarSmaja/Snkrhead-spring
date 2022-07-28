@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Buyers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2">
+    <h1>All Buyers</h1>
+    <table class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th scope="col">Order Id</th>
+            <th scope="col">Ime</th>
+            <th scope="col">Prezime</th>
+            <th scope="col">Email</th>
+            <th scope="col">Adresa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="singleBuyer:${listOfBuyers}">
+            <td scope="row" th:text="${singleBuyer.order_id}"></td>
+            <td scope="row" th:text="${singleBuyer.ime}"></td>
+            <td scope="row" th:text="${singleBuyer.prezime}"></td>
+            <td scope="row" th:text="${singleBuyer.email}"></td>
+            <td scope="row" th:text="${singleBuyer.adresa}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

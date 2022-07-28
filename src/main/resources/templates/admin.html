@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/admin.css}">
+</head>
+<body>
+<div id="hero">
+    <div id="header">
+        <a id="header-link" href="/"><p> < Go Back </p></a>
+    </div>
+    <div id="main">
+        <h1 style="margin-bottom: 3%; color: white;">Admin Panel</h1>
+        <a href="/viewShoes" id="btn">Pogledajte Sve Patike</a>
+        <a href="#" id="btn" style="margin-top: 2%">Dodajte Nove Patike</a>
+        <a href="/viewSuppliers" id="btn" style="margin-top: 2%">Pogledajte Sve Dobavljace</a>
+        <a href="#" id="btn" style="margin-top: 2%">Dodajte Novog Dobavljaca</a>
+        <a href="/viewUsers" id="btn" style="margin-top: 2%">Pogledajte Sve Korisnike</a>
+        <a href="/viewBuyers" id="btn" style="margin-top: 2%">Pogledajte Sve Kupce</a>
+    </div>
+</div>
+</body>
+</html>
