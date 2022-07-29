@@ -81,6 +81,11 @@ public class ShoeController {
         return "redirect:/";
     }
 
+    @GetMapping("/login")
+    public String showLogin() {
+        return "login";
+    }
+
     @GetMapping("/addSupplier")
     public String addSupplier(Model model) {
         Supplier supplier = new Supplier();
