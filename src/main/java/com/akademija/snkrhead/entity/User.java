@@ -1,17 +1,31 @@
 package com.akademija.snkrhead.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "users", schema = "snkrhead")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_id;
+
     private String email;
+
     private String first_name;
+
     private String last_name;
+
+    private String user_name;
+
+    private String password;
+
+    private String role;
+
+    public User() {
+
+    }
 
     public Long getUser_id() {
         return user_id;
@@ -45,13 +59,50 @@ public class User {
         this.last_name = last_name;
     }
 
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(user_id, user.user_id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(user_id);
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "user_id=" + user_id +
-                ", email='" + email + '\'' +
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }

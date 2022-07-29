@@ -65,7 +65,7 @@ public class ShoeController {
     public String showRegister(Model model) {
         User user = new User();
         model.addAttribute("emptyUser", user);
-        return "register.html";
+        return "register";
     }
 
     @PostMapping("/saveUser")

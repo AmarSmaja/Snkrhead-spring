@@ -15,6 +15,10 @@ public class Buyer {
     private String email;
     private String adresa;
 
+    public Buyer() {
+
+    }
+
     public Long getOrder_id() {
         return order_id;
     }

@@ -16,6 +16,9 @@
       <th scope="col">Email</th>
       <th scope="col">Ime</th>
       <th scope="col">Prezime</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Password</th>
+      <th scope="col">Role</th>
     </tr>
     </thead>
     <tbody>
@@ -24,6 +27,9 @@
       <td scope="row" th:text="${singleUser.email}"></td>
       <td scope="row" th:text="${singleUser.first_name}"></td>
       <td scope="row" th:text="${singleUser.last_name}"></td>
+      <td scope="row" th:text="${singleUser.user_name}"></td>
+      <td scope="row" th:text="${singleUser.password}"></td>
+      <td scope="row" th:text="${singleUser.role}"></td>
     </tr>
     </tbody>
   </table>
