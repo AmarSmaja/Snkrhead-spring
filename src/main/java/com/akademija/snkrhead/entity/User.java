@@ -1,5 +1,7 @@
 package com.akademija.snkrhead.entity;
 
+import org.springframework.stereotype.Controller;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -11,13 +13,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_id;
 
+    @Basic(optional = false)
+    @Column(name = "email", unique = true)
     private String email;
 
     private String first_name;
 
     private String last_name;
 
-    private String user_name;
+    @Column(unique = true)
+    private String username;
 
     private String password;
 
@@ -59,14 +64,6 @@ public class User {
         this.last_name = last_name;
     }
 
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -81,6 +78,14 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override

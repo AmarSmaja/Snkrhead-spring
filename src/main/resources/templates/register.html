@@ -11,11 +11,16 @@
     <h1>Register</h1>
     <hr>
     <form action="#" th:action="@{/saveUser}" th:object="${emptyUser}" method="post">
-        <input type="text" placeholder="Unesite Email (obavezno)" th:field="*{email}" class="form-control mb-4 col-4"/>
-        <input type="text" placeholder="Unesite Ime (obavezno)" th:field="*{first_name}" class="form-control mb-4 col-4"/>
-        <input type="text" placeholder="Unesite Prezime" th:field="*{last_name}" class="form-control mb-4 col-4"/>
-        <input type="text" placeholder="Unesite User Name (obavezno)" th:field="*{user_name}" class="form-control mb-4 col-4"/>
-        <input type="text" placeholder="Unesite Password (obavezno)" th:field="*{password}" class="form-control mb-4 col-4"/>
+        <label class="form-label" for="form3Example1c">Email</label>
+        <input type="text" placeholder="Unesite Email (obavezno)" th:field="*{email}" class="form-control mb-4 col-4" id="form3Example1c"/>
+        <label class="form-label" for="form3Example2c">Ime</label>
+        <input type="text" placeholder="Unesite Ime (obavezno)" th:field="*{first_name}" class="form-control mb-4 col-4" id="form3Example2c" />
+        <label class="form-label" for="form3Example3c">Prezime</label>
+        <input type="text" placeholder="Unesite Prezime" th:field="*{last_name}" class="form-control mb-4 col-4" id="form3Example3c"/>
+        <label class="form-label" for="form3Example4c">User Name</label>
+        <input type="text" placeholder="Unesite User Name (obavezno)" th:field="*{username}" class="form-control mb-4 col-4" id="form3Example4c"/>
+        <label class="form-label" for="form3Example5c">Password</label>
+        <input type="text" placeholder="Unesite Password (obavezno)" th:field="*{password}" class="form-control mb-4 col-4" id="form3Example5c"/>
         <button type="submit"  class="btn btn-info col-2">Save User</button>
     </form>
 </div>

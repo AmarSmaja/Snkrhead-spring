@@ -3,6 +3,7 @@ package com.akademija.snkrhead.controller;
 import com.akademija.snkrhead.entity.*;
 import com.akademija.snkrhead.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,8 @@ public class ShoeController {
     private UserService userService;
     @Autowired
     private BuyerService buyerService;
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     @GetMapping("/")
     public String index() {
@@ -70,6 +73,10 @@ public class ShoeController {
 
     @PostMapping("/saveUser")
     public String saveUser(@ModelAttribute("emptyUser") User user) {
+        String plainPass = user.getPassword();
+        String hashPass = passwordEncoder.encode(plainPass);
+        user.setPassword(hashPass);
+        user.setRole("USER");
         userService.saveUser(user);
         return "redirect:/";
     }
